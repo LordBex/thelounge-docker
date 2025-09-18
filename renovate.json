@@ -12,13 +12,13 @@
                 "THELOUNGE_VERSION\\??=(?<currentValue>[^\\s]+)"
             ],
             "datasourceTemplate": "npm",
-            "packageNameTemplate": "thelounge",
-            "depNameTemplate": "thelounge"
+            "packageNameTemplate": "@lordbex/thelounge",
+            "depNameTemplate": "@lordbex/thelounge"
         }
     ],
     "packageRules": [
         {
-            "matchPackageNames": ["thelounge"],
+            "matchPackageNames": ["@lordbex/thelounge"],
             "ignoreUnstable": false
         }
     ]
