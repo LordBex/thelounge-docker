@@ -31,7 +31,7 @@ jobs:
 
       - name: Checkout latest stable release
         if: ${{ github.event_name == 'schedule' }}
-        run: git checkout "$(git tag -l | grep -E "^[0-9]*\.[0-9]*\.[0-9]*$" | tail -n 1)"
+        run: git checkout "$(git tag -l | grep -E "^v?[0-9]*\.[0-9]*\.[0-9]*(-[a-z]*)?$" | tail -n 1)"
 
       - name: Checkout provided tag
         if: ${{ inputs.tag }}
@@ -68,15 +68,15 @@ jobs:
           VERSION="$(git describe --exact-match --tags HEAD)"
           TAG="$VERSION"
           MAJOR_TAG="$(sed -nre 's/^([0-9]+).*/\1/p' <<< "$VERSION")"
-          DOCKERHUB_IMAGE="thelounge/thelounge"
-          GITHUB_IMAGE="ghcr.io/thelounge/thelounge"
+          DOCKERHUB_IMAGE="lordbex/thelounge"
+          GITHUB_IMAGE="ghcr.io/lordbex/thelounge"
           TAGS=(
               "--tag" "${DOCKERHUB_IMAGE}:${TAG}"
               "--tag" "${GITHUB_IMAGE}:${TAG}"
           )
 
           # If not a pre-release push :latest & MAJOR_TAG
-          if grep -qE "^[0-9]*\.[0-9]*\.[0-9]*$" <<< "${VERSION}"; then
+          if grep -qE "^v?[0-9]*\.[0-9]*\.[0-9]*(-[a-z]*)?$" <<< "${VERSION}"; then
               TAGS+=(
                   "--tag" "${DOCKERHUB_IMAGE}:latest"
                   "--tag" "${DOCKERHUB_IMAGE}:${MAJOR_TAG}"

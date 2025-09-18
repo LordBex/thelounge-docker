@@ -1,33 +1,49 @@
 ![The Lounge](https://raw.githubusercontent.com/thelounge/thelounge.github.io/master/assets/logos/logo/TL_Grey%26Yellow_Vertical_logotype_Transparent_Bg/TL_Grey%26Yellow_Vertical_logotype_Transparent_Bg.png)
 
-#### Docker image for The Lounge, a modern web IRC client designed for self-hosting
+# The Lounge with Blowfish Support - Docker Image
 
-**[Website](https://thelounge.chat/) • [Docs](https://thelounge.chat/docs) • [Demo](https://demo.thelounge.chat/)**
+> **⚠️ This is a FORK of the official The Lounge Docker image**  
+> This repository contains a Docker image for [@lordbex/thelounge](https://www.npmjs.com/package/@lordbex/thelounge), which is a fork of The Lounge with added **Blowfish encryption support**.
 
-[![#thelounge IRC channel on Libera.Chat"](https://img.shields.io/badge/Libera.Chat-%23thelounge-415364.svg?colorA=ff9e18&style=flat-square)](https://demo.thelounge.chat/) [![Total pulls on Docker](https://img.shields.io/docker/pulls/thelounge/thelounge.svg?style=flat-square&maxAge=3600)](https://hub.docker.com/r/thelounge/thelounge/) [![Total stars on Docker](https://img.shields.io/docker/stars/thelounge/thelounge.svg?colorB=007dc7&style=flat-square&maxAge=3600)](https://hub.docker.com/r/thelounge/thelounge/)
+#### Docker image for The Lounge with Blowfish, a modern web IRC client designed for self-hosting
+
+**[Original Website](https://thelounge.chat/) • [Original Docs](https://thelounge.chat/docs) • [Original Demo](https://demo.thelounge.chat/)**  
+**[Fork Repository](https://github.com/LordBex/thelounge) • [Fork Package](https://www.npmjs.com/package/@lordbex/thelounge)**
 
 ---
 
 ### Overview
 
 -   **Modern features brought to IRC.** Push notifications, link previews, new message markers, and more bring IRC to the 21st century.
+-   **🔐 Blowfish encryption support.** This fork adds support for Blowfish encrypted channels and private messages.
 -   **Always connected.** Remains connected to IRC servers while you are offline.
 -   **Cross platform.** It doesn't matter what OS you use, it just works wherever Node.js runs.
 -   **Responsive interface.** The client works smoothly on every desktop, smartphone and tablet.
 -   **Synchronized experience.** Always resume where you left off no matter what device.
 
-To learn more about configuration, usage and features of The Lounge, take a look at [the website](https://thelounge.chat).
+### What's different in this fork?
+
+-   **Blowfish encryption**: Support for encrypted IRC communication using Blowfish cipher
+-   **Based on The Lounge**: Maintains all original features and compatibility
+-   **Regular updates**: Follows upstream releases with added Blowfish functionality
+
+To learn more about configuration, usage and features of The Lounge, take a look at [the website](https://thelounge.chat).  
+For Blowfish-specific features, see the [fork repository](https://github.com/LordBex/thelounge).
 
 ### Registries
 
-Images are available in the following registries:
+Images for this Blowfish fork are available in the following registries:
 
+-   [ghcr.io](https://github.com/LordBex/thelounge-docker/pkgs/container/thelounge): `ghcr.io/lordbex/thelounge`
+-   [DockerHub](https://hub.docker.com/r/lordbex/thelounge): `lordbex/thelounge`
+
+#### Original The Lounge images (without Blowfish):
 -   [ghcr.io](https://github.com/thelounge/thelounge-docker/pkgs/container/thelounge): `ghcr.io/thelounge/thelounge`
 -   [DockerHub](https://hub.docker.com/r/thelounge/thelounge): `thelounge/thelounge`
 
 ### Running a container
 
-One can get started quickly by using the example [`docker-compose.yml`](https://github.com/thelounge/docker-lounge/blob/master/docker-compose.yml) file. [What is docker-compose?](https://docs.docker.com/compose/)
+One can get started quickly by using the example [`docker-compose.yml`](https://github.com/LordBex/thelounge-docker/blob/master/docker-compose.yml) file. [What is docker-compose?](https://docs.docker.com/compose/)
 
 ```sh
 $ docker compose up --detach
@@ -41,7 +57,7 @@ $ docker run --detach \
              --publish 9000:9000 \
              --volume thelounge:/var/opt/thelounge \
              --restart always \
-             ghcr.io/thelounge/thelounge:latest
+             ghcr.io/lordbex/thelounge:latest
 ```
 
 ### Executing commands in the container
@@ -66,7 +82,7 @@ $ docker run --detach \
              --publish 9000:9000 \
              --volume thelounge:/var/opt/thelounge \
              --restart always \
-             ghcr.io/thelounge/thelounge:latest
+             ghcr.io/lordbex/thelounge:latest
 ```
 
 Refer to the [identd / oidentd docs](https://thelounge.chat/docs/guides/identd-and-oidentd) for more detailed information.
@@ -100,7 +116,7 @@ $ docker run --detach \
              --publish 5000:9000 \ # Change host port to listen on port 5000
              --volume thelounge:/var/opt/thelounge \
              --restart always \
-             ghcr.io/thelounge/thelounge:latest
+             ghcr.io/lordbex/thelounge:latest
 ```
 
 ### Container user (advanced usage)
