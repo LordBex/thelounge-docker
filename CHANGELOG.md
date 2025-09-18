@@ -1,5 +1,33 @@
 # Changelog
 
+## [4.4.3](https://github.com/LordBex/thelounge-docker/compare/v4.4.3...4.4.3) (2025-09-18)
+
+
+### Features
+
+* add opencontainers labels ([#157](https://github.com/LordBex/thelounge-docker/issues/157)) ([dc8d2bb](https://github.com/LordBex/thelounge-docker/commit/dc8d2bbb573d3a0bce8bb46110aa47860f97ace9))
+* automatic releases ([#165](https://github.com/LordBex/thelounge-docker/issues/165)) ([bec4974](https://github.com/LordBex/thelounge-docker/commit/bec4974f558c376acaed9a32ce219ec46239101f))
+* use LTS version of node ([#199](https://github.com/LordBex/thelounge-docker/issues/199)) ([6da36d6](https://github.com/LordBex/thelounge-docker/commit/6da36d6444bdf6334ba0cd124529b6ca27c9ce7b))
+* use the USER directive ([#187](https://github.com/LordBex/thelounge-docker/issues/187)) ([d4b3d3b](https://github.com/LordBex/thelounge-docker/commit/d4b3d3b80ccdf8cbbef1abaf62e8c84bb7b7d616))
+
+
+### Bug Fixes
+
+* add node-gyp dependencies necessary to build sqlite3 ([#144](https://github.com/LordBex/thelounge-docker/issues/144)) ([51d9940](https://github.com/LordBex/thelounge-docker/commit/51d9940ab27fe2d9c4f8e31995777ee9a549bcf6))
+* add python setuptools required for sqlite build ([#198](https://github.com/LordBex/thelounge-docker/issues/198)) ([421790c](https://github.com/LordBex/thelounge-docker/commit/421790c7f47dd49b697b4e57eaa12a27890b2662))
+* **release-please:** target master instead of main ([#173](https://github.com/LordBex/thelounge-docker/issues/173)) ([abb97f4](https://github.com/LordBex/thelounge-docker/commit/abb97f49284efe06e05244d6c3401089126c8190))
+* **release-please:** use custom token ([#175](https://github.com/LordBex/thelounge-docker/issues/175)) ([75c03dd](https://github.com/LordBex/thelounge-docker/commit/75c03dd2d10db4806bc5881a2555d8fb7eff516e))
+* remove python2 & build-base from build-deps ([#142](https://github.com/LordBex/thelounge-docker/issues/142)) ([034fc05](https://github.com/LordBex/thelounge-docker/commit/034fc052b009ee90b8e6942af4cfa9de1a88fe2e))
+* **renovate:** fix npm versioning range ([#169](https://github.com/LordBex/thelounge-docker/issues/169)) ([27fe810](https://github.com/LordBex/thelounge-docker/commit/27fe810b19556af2806d321e2c63e0995d07831b))
+* **renovate:** set ignoreUnstable: false ([#171](https://github.com/LordBex/thelounge-docker/issues/171)) ([3466f9d](https://github.com/LordBex/thelounge-docker/commit/3466f9d68d6c622eac20bbed3ddcb4b86e1b0f37))
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency thelounge to v4.4.1 ([#176](https://github.com/LordBex/thelounge-docker/issues/176)) ([ca61267](https://github.com/LordBex/thelounge-docker/commit/ca61267556e2f3663b290ed61f635c07ecd25b62))
+* **deps:** update dependency thelounge to v4.4.1-rc.2 ([#172](https://github.com/LordBex/thelounge-docker/issues/172)) ([3b9f4f0](https://github.com/LordBex/thelounge-docker/commit/3b9f4f0d359dfcf2eaac271d341889c0f23e055d))
+* **deps:** update dependency thelounge to v4.4.3 ([#183](https://github.com/LordBex/thelounge-docker/issues/183)) ([e580387](https://github.com/LordBex/thelounge-docker/commit/e580387da46b66bffb7dd8770c583c7a411e852a))
+
 ## [4.4.3](https://github.com/thelounge/thelounge-docker/compare/4.4.1...4.4.3) (2024-04-06)
 
 
