@@ -1,6 +1,6 @@
 FROM node:22-alpine
 
-ARG THELOUNGE_VERSION=4.4.3-blowfish
+ARG THELOUNGE_VERSION=4.4.4-blowfish
 
 LABEL org.opencontainers.image.title "Forked from 'The Lounge' image with Blowfish."
 LABEL org.opencontainers.image.description "Forked of Docker image for The Lounge, a modern web IRC client with BlowFish designed for self-hosting."
