@@ -1,4 +1,4 @@
-FROM node:24-alpine
+FROM node:22-alpine
 
 ARG TARGETARCH
 ARG THELOUNGE_VERSION=4.5.3-blowfish
@@ -12,9 +12,9 @@ LABEL org.opencontainers.image.version="${THELOUNGE_VERSION}"
 LABEL org.opencontainers.image.licenses="MIT"
 
 EXPOSE 9000
-ENV THELOUNGE_HOME "/var/opt/thelounge"
 
-ENV NODE_ENV production
+ENV THELOUNGE_HOME="/var/opt/thelounge"
+ENV NODE_ENV=production
 
 # ENV npm_config_arch=$TARGETARCH
 RUN apk --update --no-cache --virtual build-deps add python3 py3-setuptools build-base git \
