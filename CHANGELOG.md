@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.7.0](https://github.com/LordBex/thelounge-docker/compare/4.6.0-blowfish...4.7.0) (2026-02-22)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @lordbex/thelounge to v4.7.0 ([3670cf1](https://github.com/LordBex/thelounge-docker/commit/3670cf1c349f96c4a9b0057e2e7dcd5f38a8dc92))
+
 ## [4.6.0-blowfish](https://github.com/LordBex/thelounge-docker/compare/4.5.3-blowfish...4.6.0-blowfish) (2026-02-15)
 
 
