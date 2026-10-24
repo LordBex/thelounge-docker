@@ -31,7 +31,7 @@ jobs:
 
       - name: Checkout latest stable release
         if: ${{ github.event_name == 'schedule' }}
-        run: git checkout "$(git tag -l | grep -E "^v?[0-9]*\.[0-9]*\.[0-9]*(-[a-z]*)?$" | tail -n 1)"
+        run: git checkout "$(git tag -l --sort=-v:refname | grep -E "^v?[0-9]*\.[0-9]*\.[0-9]*(-[a-z]*)?$" | head -n 1)"
 
       - name: Checkout provided tag
         if: ${{ inputs.tag }}
