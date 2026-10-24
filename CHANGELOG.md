@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.9.0](https://github.com/LordBex/thelounge-docker/compare/4.8.10...4.9.0) (2026-10-24)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency @lordbex/thelounge to v4.9.0 ([81d26c1](https://github.com/LordBex/thelounge-docker/commit/81d26c1aba0e3b12233091e9b0e0f09ece9df20b))
+
 ## [4.8.10](https://github.com/LordBex/thelounge-docker/compare/4.8.9...4.8.10) (2026-07-11)
 
 
