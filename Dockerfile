@@ -1,4 +1,4 @@
-FROM node:22-alpine
+FROM node:24-alpine
 
 ARG TARGETARCH
 ARG THELOUNGE_VERSION=4.9.0
